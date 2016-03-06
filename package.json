@@ -1,0 +1,27 @@
+{
+  "name": "asyncmemo",
+  "version": "0.0.0",
+  "description": "memoize asynchronous function calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clehner/asyncmemo"
+  },
+  "keywords": [
+    "async",
+    "cache",
+    "memo",
+    "memoize"
+  ],
+  "author": "Charles Lehner (http://celehner.com/)",
+  "license": "Fair",
+  "bugs": {
+    "url": "https://github.com/clehner/asyncmemo/issues"
+  },
+  "devDependencies": {
+    "tape": "^4.5.0"
+  }
+}
