@@ -60,3 +60,13 @@ test('handle concurrent requests', function (t) {
     t.equal(result, 'foo-bar-one-5')
   })
 })
+
+test('preserve this', function (t) {
+  var obj = {get: get}
+  obj.get('thing', function (err, result) {
+    t.error(err, 'thing')
+    t.equal(this, obj)
+    t.equal(result, 'foo-bar-thing-0')
+    t.end()
+  })
+})
