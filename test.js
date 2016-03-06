@@ -70,3 +70,24 @@ test('preserve this', function (t) {
     t.end()
   })
 })
+
+test('memoize undefined', function (t) {
+  var i = 0
+  var get = asyncMemo(function (arg, cb) {
+    i++
+    cb()
+  })
+
+  get('one', function (err, result) {
+    t.error(err, 'one')
+    t.equal(i, 1)
+    t.equal(result, undefined)
+
+    get('one', function (err, result) {
+      t.error(err, 'two')
+      t.equal(i, 1)
+      t.equal(result, undefined)
+      t.end()
+    })
+  })
+})
