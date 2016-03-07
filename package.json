@@ -1,6 +1,6 @@
 {
   "name": "asyncmemo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "memoize asynchronous function calls",
   "main": "index.js",
   "scripts": {
